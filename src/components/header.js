@@ -42,7 +42,10 @@ const Header = () => {
   const data = useStaticQuery(query)
 
   return (
-    <StyledWrapper className="header" background={data.file.publicURL}>
+    <StyledWrapper
+      className="header"
+      background={data.allFile.nodes[0].publicURL}
+    >
       <Logo />
       <Hamburger />
       <Nav />
@@ -52,8 +55,10 @@ const Header = () => {
 
 const query = graphql`
   {
-    file(name: { eq: "header" }) {
-      publicURL
+    allFile(filter: { name: { eq: "header" } }) {
+      nodes {
+        publicURL
+      }
     }
   }
 `

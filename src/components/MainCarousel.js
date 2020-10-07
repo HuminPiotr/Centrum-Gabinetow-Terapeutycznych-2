@@ -78,8 +78,6 @@ const SlideContent = styled.div`
     color: black;
     text-shadow: none;
     list-style-type: square;
-
- */
   }
 
   @media (max-width: 640px) {
