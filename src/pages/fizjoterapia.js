@@ -164,7 +164,7 @@ export const query = graphql`
       nodes {
         fotografia {
           fluid {
-            ...GatsbyDatoCmsFluid_tracedSVG
+            ...GatsbyDatoCmsFluid
           }
         }
         imienazwisko
