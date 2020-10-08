@@ -102,7 +102,7 @@ const MainCarousel = () => {
       <CarouselItem>
         <StyledImage
           className="carousel__image"
-          fluid={nodes[2].fluid}
+          fluid={nodes[1].fluid}
           alt="slide2"
         ></StyledImage>
         <SlideContent>
@@ -138,7 +138,7 @@ const MainCarousel = () => {
       <CarouselItem>
         <StyledImage
           className="carousel__image"
-          fluid={nodes[1].fluid}
+          fluid={nodes[2].fluid}
           alt="slide3"
         ></StyledImage>
         <SlideContent>
