@@ -40,7 +40,10 @@ const MainHeader = () => {
   const data = useStaticQuery(query)
 
   return (
-    <StyledWrapper className="header" background={data.nodes[0].publicURL}>
+    <StyledWrapper
+      className="header"
+      background={data.allFile.nodes[0].publicURL}
+    >
       <Logo />
       <Hamburger />
       <Nav />
