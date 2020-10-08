@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Logo from "./Logo"
 import Nav from "./Nav"
 import Hamburger from "./Hamburger"
@@ -37,10 +37,10 @@ const StyledWrapper = styled.div`
 `
 
 const MainHeader = () => {
-  // const data = useStaticQuery(query)
+  const data = useStaticQuery(query)
 
   return (
-    <StyledWrapper className="header" background="header.svg">
+    <StyledWrapper className="header" background={data.nodes[0].publicURL}>
       <Logo />
       <Hamburger />
       <Nav />
@@ -48,14 +48,14 @@ const MainHeader = () => {
   )
 }
 
-// const query = graphql`
-//   {
-//     allFile(filter: { name: { eq: "header" } }) {
-//       nodes {
-//         publicURL
-//       }
-//     }
-//   }
-// `
+const query = graphql`
+  {
+    allFile(filter: { name: { eq: "header" } }) {
+      nodes {
+        publicURL
+      }
+    }
+  }
+`
 
 export default MainHeader
