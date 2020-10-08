@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import TopNav from "./TopNav"
-// import Header from "./Header"
+import Header from "./Header"
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ const StyledWrapper = styled.div`
 const CompleteNavigation = () => (
   <StyledWrapper>
     <TopNav></TopNav>
-    {/* <Header></Header> */}
+    <Header></Header>
   </StyledWrapper>
 )
 
