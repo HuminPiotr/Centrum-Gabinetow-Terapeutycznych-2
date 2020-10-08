@@ -44,6 +44,10 @@ const ArticleWrapper = styled.div`
   .featuredImage {
     text-align: center;
   }
+
+  @media (max-width: 640px) {
+    margin: 15px;
+  }
 `
 const StyledImage = styled(Image)`
   margin: 0 auto;
