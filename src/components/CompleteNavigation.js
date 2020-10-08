@@ -2,12 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 import TopNav from "./TopNav"
-import Header from "./Header"
+// import Header from "./Header"
 
 const StyledWrapper = styled.div`
-  /* position: sticky;
-  top: 0;
-  left: 0; */
   width: 100%;
   z-index: 5;
 
@@ -26,7 +23,7 @@ const StyledWrapper = styled.div`
 const CompleteNavigation = () => (
   <StyledWrapper>
     <TopNav></TopNav>
-    <Header></Header>
+    {/* <Header></Header> */}
   </StyledWrapper>
 )
 
