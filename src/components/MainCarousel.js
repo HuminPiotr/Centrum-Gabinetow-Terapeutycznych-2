@@ -12,6 +12,10 @@ const StyledCarousel = styled(Carousel)`
   width: 100%;
   /* min-height: 400px; */
   margin-top: -35px;
+
+  .carousel-indicators li {
+    background-color: ${({ theme }) => theme.color.primary};
+  }
 `
 
 const CarouselItem = styled(Carousel.Item)`
