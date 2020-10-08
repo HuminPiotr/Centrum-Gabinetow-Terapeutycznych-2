@@ -36,7 +36,7 @@ const StyledWrapper = styled.div`
   }
 `
 
-const Header = () => {
+const MainHeader = () => {
   // const data = useStaticQuery(query)
 
   return (
@@ -58,4 +58,4 @@ const Header = () => {
 //   }
 // `
 
-export default Header
+export default MainHeader
