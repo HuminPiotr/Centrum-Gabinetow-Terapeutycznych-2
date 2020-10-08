@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     }
     a:hover{
         text-decoration: none;
+        color: inherit;
     }
     button{
         padding: 0;
