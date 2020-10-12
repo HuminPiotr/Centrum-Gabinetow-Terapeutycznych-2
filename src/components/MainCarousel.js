@@ -121,7 +121,7 @@ const SlideContent = styled.div`
     top: 0;
     /* position: static; */
     h2 {
-      font-size: ${({ theme }) => theme.fontSize.big};
+      font-size: 2.8rem;
     }
     li {
       font-size: ${({ theme }) => theme.fontSize.basic};
