@@ -6,6 +6,7 @@ import Nav from "./Nav"
 import Hamburger from "./Hamburger"
 
 const StyledWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-self: flex-start;

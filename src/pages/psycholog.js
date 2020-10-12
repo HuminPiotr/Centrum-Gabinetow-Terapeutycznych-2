@@ -78,6 +78,9 @@ const StyledWrapper = styled.div`
       &__text {
         margin: 0;
         width: 100%;
+        p {
+          text-align: left;
+        }
       }
     }
   }

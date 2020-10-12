@@ -80,7 +80,7 @@ const ONasPage = ({ data }) => {
             <h2>Kim jesteśmy?</h2>
             <p>
               Terapeuta, psycholog, fizjoterapeuta, pedagog i logopeda, których
-              łączy miłość do dzieci i pragnienie, aby pomagać im w jak
+              łączy miłość do ludzi i pragnienie, aby pomagać im w jak
               najbardziej efektywny sposób. My nie rozmawiamy o problemach, my
               staramy się z nimi zmierzyć!
               <br />

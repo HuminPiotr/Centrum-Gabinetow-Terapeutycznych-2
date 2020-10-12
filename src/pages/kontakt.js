@@ -37,7 +37,6 @@ const StyledWrapper = styled.div`
     float: right;
     text-align: right;
     margin-bottom: 25px;
-    text-transform: capitalize;
 
     header {
       justify-content: flex-end;

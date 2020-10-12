@@ -1,49 +1,81 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+
 import { Link } from "gatsby"
 
 import { Carousel } from "react-bootstrap"
 
 const StyledCarousel = styled(Carousel)`
+  position: relative;
+  margin-top: -175px;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  /* min-height: 400px; */
-  margin-top: -35px;
+  height: 75vh;
+  z-index: 0;
 
   .carousel-indicators li {
-    background-color: ${({ theme }) => theme.color.primary};
+    /* background-color: ${({ theme }) => theme.color.primary}; */
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  @media (max-width: 640px) {
+    margin-top: 0px;
+
+    height: 340px;
   }
 `
 
 const CarouselItem = styled(Carousel.Item)`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 75vh;
   padding: 0 13rem;
+  background-image: url(${({ background }) => background});
+  background-repeat: no-repeat;
+  background-position:  50% 25%;
+  background-size: cover;
+
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
   @media (max-width: 640px) {
     padding: 10px;
     padding-bottom: 45px;
-    margin-top: 50px;
+    background-position-y: -100px;
     .carousel__image {
       display: none !important;
     }
   }
 `
-const StyledImage = styled(Image)`
-  position: relative;
-  top: 0;
-  float: right;
-  width: 50%;
-`
+// const StyledImage = styled(Image)`
+//   position: relative;
+//   top: 0;
+//   float: right;
+//   width: 100%;
+//   object-fit: contain;
+// `
 
 const SlideContent = styled.div`
-  width: 40%;
+  width: 50%;
   position: relative;
-  top: 70px;
+  top: 25%;
   color: ${({ theme }) => theme.color.tertiary};
   text-shadow: 2px 2px ${({ theme }) => theme.color.secondary};
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 55px;
 
   h2 {
     width: 100%;
@@ -86,7 +118,8 @@ const SlideContent = styled.div`
 
   @media (max-width: 640px) {
     width: 100%;
-    position: static;
+    top: 0;
+    /* position: static; */
     h2 {
       font-size: ${({ theme }) => theme.fontSize.big};
     }
@@ -103,12 +136,13 @@ const MainCarousel = () => {
   } = data
   return (
     <StyledCarousel fade interval={6000} controls={false}>
-      <CarouselItem>
-        <StyledImage
+      <CarouselItem background={nodes[1].fluid.src}>
+        <div className="shadow" />
+        {/* <StyledImage
           className="carousel__image"
           fluid={nodes[1].fluid}
           alt="slide2"
-        ></StyledImage>
+        ></StyledImage> */}
         <SlideContent>
           <h2>
             <Link to="/psycholog">Gabinet psychologiczny</Link>
@@ -120,12 +154,13 @@ const MainCarousel = () => {
           </ul>
         </SlideContent>
       </CarouselItem>
-      <CarouselItem>
-        <StyledImage
+      <CarouselItem background={nodes[0].fluid.src}>
+        <div className="shadow" />
+        {/* <StyledImage
           className="carousel__image"
           fluid={nodes[0].fluid}
           alt="slide1"
-        ></StyledImage>
+        ></StyledImage> */}
         <SlideContent>
           <h2>
             <Link to="/terapia-sensoryczna">
@@ -139,12 +174,13 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem>
-        <StyledImage
+      <CarouselItem background={nodes[2].fluid.src}>
+        <div className="shadow" />
+        {/* <StyledImage
           className="carousel__image"
           fluid={nodes[2].fluid}
           alt="slide3"
-        ></StyledImage>
+        ></StyledImage> */}
         <SlideContent>
           <h2>
             <Link to="/fizjoterapia">Gabinet fizjoterapeutyczny</Link>
@@ -156,12 +192,13 @@ const MainCarousel = () => {
           </ul>
         </SlideContent>
       </CarouselItem>
-      <CarouselItem>
-        <StyledImage
+      <CarouselItem background={nodes[4].fluid.src}>
+        <div className="shadow" />
+        {/* <StyledImage
           className="carousel__image"
           fluid={nodes[4].fluid}
           alt="slide4"
-        ></StyledImage>
+        ></StyledImage> */}
         <SlideContent>
           <h2>
             <Link to="/logopeda">Gabinet logopedyczny</Link>
@@ -173,12 +210,13 @@ const MainCarousel = () => {
           </ul>
         </SlideContent>
       </CarouselItem>
-      <CarouselItem>
-        <StyledImage
+      <CarouselItem background={nodes[3].fluid.src}>
+        <div className="shadow" />
+        {/* <StyledImage
           className="carousel__image"
           fluid={nodes[3].fluid}
           alt="slide4"
-        ></StyledImage>
+        ></StyledImage> */}
         <SlideContent>
           <h2>
             <Link to="/terapia-pedagogiczna">
@@ -198,10 +236,10 @@ const MainCarousel = () => {
 
 const query = graphql`
   {
-    allImageSharp(filter: { fixed: { originalName: { regex: "/slider/" } } }) {
+    allImageSharp(filter: { fluid: { originalName: { regex: "/slide/" } } }) {
       nodes {
-        fluid(maxWidth: 550, quality: 100) {
-          ...GatsbyImageSharpFluid_noBase64
+        fluid(maxWidth: 2400) {
+          src
         }
       }
     }

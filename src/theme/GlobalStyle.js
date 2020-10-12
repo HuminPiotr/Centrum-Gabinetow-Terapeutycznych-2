@@ -20,9 +20,11 @@ const GlobalStyle = createGlobalStyle`
     }
     p{
        font-size: 2rem; 
+       line-height: 125%;
     }
     h1{
         font-size: 4.8rem; 
+
     }
     h2{
         font-size: 3.2rem; 

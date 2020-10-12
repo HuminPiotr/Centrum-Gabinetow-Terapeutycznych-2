@@ -68,7 +68,7 @@ class PagnitationNavigation extends React.Component {
             </Link>
           </li>
         )}
-        {navigation}
+        {navigation.length > 1 ? navigation : null}
         {!isLast && (
           <li className="next">
             <Link to={nextPage} rel="next">

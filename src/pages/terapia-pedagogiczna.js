@@ -78,6 +78,9 @@ const StyledWrapper = styled.div`
       &__text {
         margin: 0;
         width: 100%;
+        p {
+          text-align: left;
+        }
       }
     }
     .info {
@@ -138,7 +141,7 @@ const FizjoterapiaPage = ({ data }) => {
           </div>
           <div>
             <h2>Cennik:</h2>
-            <p>Spotkanie do 60min - 100zł</p>
+            <p>???????????????????</p>
           </div>
         </div>
       </StyledWrapper>

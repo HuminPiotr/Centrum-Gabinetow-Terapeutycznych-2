@@ -49,6 +49,7 @@ const StyledWrapper = styled.div`
     p {
       text-indent: 40px;
       margin: 0;
+      text-align: left;
     }
   }
   .info {

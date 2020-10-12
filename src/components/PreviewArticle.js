@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import ReactHtmlParser from "react-html-parser"
-
+import {Link} from 'gatsby';
 import Image from "gatsby-image"
 import ButtonLink from "./ButtonLink"
 
@@ -148,7 +148,7 @@ const PreviewArticle = ({
   content = null,
   big,
 }) => {
-  const slugifiedTitle = slugify(title, { lower: true })
+  const linkArticle = `/blog/` + slugify(title, { lower: true });
 
   return (
     <StyledPreviewArticle big={big}>
@@ -157,7 +157,7 @@ const PreviewArticle = ({
       </div>
       <section className="bar">
         <div className="text">
-          <header>{title}</header>
+          <header><Link to={linkArticle}>{title}</Link></header>
           <span>
             {author} {date}
           </span>
@@ -165,7 +165,7 @@ const PreviewArticle = ({
         <div className="text-preview">
           {content ? makeExcerpt(content, 350) : null}
         </div>
-        <ButtonLink className="button" link={`/blog/${slugifiedTitle}`}>
+        <ButtonLink className="button" link={linkArticle}>
           Czytaj więcej
         </ButtonLink>
       </section>
