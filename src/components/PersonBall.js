@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import Image from "gatsby-image"
+import {Link} from 'gatsby';
 
 const StyledPersonBall = styled.div`
   position: relative;
@@ -51,14 +52,45 @@ const StyledPersonBall = styled.div`
     `}
 `
 
-const PersonBall = ({ photo, title, subtitle, second }) => {
+const PersonBall = ({ photo, title, subtitle, second, link=false }) => {
+  console.log(subtitle);
+  let linkName;
+  switch(subtitle){
+    case 'psycholog':
+      linkName='/psycholog'
+      break;
+    case 'pedagog':
+        linkName='/terapia-pedagogiczna'
+        break;
+    case 'logopeda, pedagog':
+          linkName='/logopeda'
+          break;
+    case 'fizjoterapeuta':
+      linkName='/fizjoterapia'
+      break;
+    case 'terapeuta SI':
+      linkName='/terapia-sensoryczna'
+      break;
+  }
   return (
     <StyledPersonBall second={second}>
       <div>
-        <Image className="photo" fluid={photo.fluid} />
-        <img className="wave" src="/fala.svg" alt="wave"></img>
-        <p className="title">{title}</p>
-        <p className="subtitle">{subtitle}</p>
+        {link ? 
+          <Link to={`${linkName}#person`}><Image className="photo" fluid={photo.fluid} />
+              <img className="wave" src="/fala.svg" alt="wave"></img>
+              <p className="title">{title}</p>
+              <p className="subtitle">{subtitle}</p>
+          </Link>
+          : <> 
+          <Image className="photo" fluid={photo.fluid} />
+          <img className="wave" src="/fala.svg" alt="wave"></img>
+          <p className="title">{title}</p>
+          <p className="subtitle">{subtitle}</p>
+          </>
+
+        }
+        
+        
       </div>
     </StyledPersonBall>
   )

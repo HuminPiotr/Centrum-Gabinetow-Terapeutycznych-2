@@ -207,7 +207,7 @@ const LogopedaPage = ({ data }) => (
         </ButtonLink>
       </div>
 
-      <div className="person">
+      <div className="person" id="person"> 
         <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
         <div className="person__text">
           <h2> {data.person.nodes[0].imienazwisko} </h2>

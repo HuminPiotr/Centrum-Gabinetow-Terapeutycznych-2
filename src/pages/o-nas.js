@@ -67,6 +67,7 @@ const ONasPage = ({ data }) => {
         title={item.imienazwisko}
         subtitle={item.zawD}
         key={item.imienazwisko}
+        link
       />
     </div>
   ))
