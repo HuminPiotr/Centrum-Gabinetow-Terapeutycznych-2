@@ -59,16 +59,11 @@ const CarouselItem = styled(Carousel.Item)`
     }
   }
 `
-// const StyledImage = styled(Image)`
-//   position: relative;
-//   top: 0;
-//   float: right;
-//   width: 100%;
-//   object-fit: contain;
-// `
+
 
 const SlideContent = styled.div`
   width: 50%;
+  min-height: 50%;
   position: relative;
   top: 25%;
   color: ${({ theme }) => theme.color.tertiary};
@@ -168,8 +163,9 @@ const MainCarousel = () => {
             </Link>
           </h2>
           <ul>
-            <li>Terapia ręki</li>
-            <li>Terapia neurotaktylna</li>
+            <li>Terapia</li>
+            <li>Diagnoza</li>
+            <li>Konsultacje</li>
           </ul>
         </SlideContent>
       </CarouselItem>

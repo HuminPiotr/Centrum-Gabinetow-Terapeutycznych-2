@@ -28,6 +28,10 @@ const ArticleWrapper = styled.div`
   p {
     font-size: ${({ theme }) => theme.fontSize.basic};
   }
+  .content img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
   table,
   td,
   tr {
@@ -71,8 +75,9 @@ const PostLayout = ({ data }) => {
         <p className="author"> {data.datoCmsArtykul.autor}</p>
       </span>
       <hr></hr>
-
+      <div class="content">
       {ReactHtmlParser(data.datoCmsArtykul.tresc)}
+      </div>
     </ArticleWrapper>
   )
 }
