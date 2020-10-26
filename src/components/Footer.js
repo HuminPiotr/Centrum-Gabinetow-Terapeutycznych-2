@@ -52,8 +52,8 @@ const Footer = () => {
     allFile: { nodes },
   } = data
 
-  const iconHouse = nodes[3].publicURL
-  const iconPhone = nodes[2].publicURL
+  const iconHouse = nodes[2].publicURL
+  const iconPhone = nodes[3].publicURL
 
   const phones = data.allDatoCmsProfileOsobowe.nodes.map(person => (
     <p>
