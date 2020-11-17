@@ -48,18 +48,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
 
-    
+//CAROUSEL //
     .hero{
         display: flex;
         nav{
-    width: 40%
-  }
+            width: 40%;
+         }
+        }
   @media (max-width: 640px) {
+      .hero{
     flex-direction: column;
-    nav{
-      width:100%;
-    }
-  }
+        nav{
+         width:100%;
+        }
+     }
     }
 `
 

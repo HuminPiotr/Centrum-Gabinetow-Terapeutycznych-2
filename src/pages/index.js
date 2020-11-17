@@ -8,14 +8,16 @@ import LatestArticles from "../components/LatestArticles"
 import TopNav from '../components/TopNav'
 
 const StyledWrapper = styled.div`
-
-
+  display: flex;
+  nav{
+          width: 40%;
+        }
 `
 
 
 const IndexPage = () => (
   <>
-    <StyledWrapper class="hero">
+    <StyledWrapper className="hero">
       <TopNav />
       <MainCarousel />
     </StyledWrapper>

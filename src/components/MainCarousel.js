@@ -110,17 +110,15 @@ const SlideContent = styled.div`
 
 const MainCarousel = () => {
   const data = useStaticQuery(query)
-  const {
-    slides: { nodes },
-  } = data
+
 
   return (
     <StyledCarousel fade interval={3000} >
 
-      <CarouselItem background={nodes[1].fluid.src}>
+      <CarouselItem background={data.first.fluid.src}>
 
       </CarouselItem>
-      <CarouselItem background={nodes[0].fluid.src}>
+      <CarouselItem background={data.fizjo.fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -134,7 +132,7 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem background={nodes[4].fluid.src}>
+      <CarouselItem background={data.logopeda.fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -148,7 +146,7 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem background={nodes[3].fluid.src}>
+      <CarouselItem background={data.sensoryczna.fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -162,7 +160,7 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem background={nodes[2].fluid.src}>
+      <CarouselItem background={data.pedagog.fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -182,20 +180,32 @@ const MainCarousel = () => {
 
 const query = graphql`
   {
-    slides:allImageSharp(filter: { fluid: { originalName: { regex: "/slide/" } } }) {
-      nodes {
-        fluid(maxWidth: 2400) {
-          src
-        }
+    first: imageSharp(fluid: {originalName: {regex: "/first-slide/"}}){
+      fluid(maxWidth:2400){
+        src
       }
     }
-    firstSlide: allImageSharp (filter: { fluid: { originalName: { regex: "/placówka/" } } }) {
-      nodes{
-        fluid(maxWidth:2400){
-          src
-        }
+      fizjo: imageSharp(fluid: {originalName: {regex: "/fizjoterapia-slide/"}}){
+      fluid(maxWidth:2400){
+        src
       }
     }
+        logopeda: imageSharp(fluid: {originalName: {regex: "/logopeda-slide/"}}){
+      fluid(maxWidth:2400){
+        src
+      }
+    }
+        pedagog: imageSharp(fluid: {originalName: {regex: "/pedagog-slide/"}}){
+      fluid(maxWidth:2400){
+        src
+      }
+    }
+        sensoryczna: imageSharp(fluid: {originalName: {regex: "/terapia-sensoryczna/"}}){
+      fluid(maxWidth:2400){
+        src
+      }
+    }
+
   }
 `
 export default MainCarousel
