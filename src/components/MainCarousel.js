@@ -16,7 +16,6 @@ const StyledCarousel = styled(Carousel)`
   z-index: 0;
 
   .carousel-indicators li {
-    /* background-color: ${({ theme }) => theme.color.primary}; */
     background-color: white;
     width: 10px;
     height: 10px;
@@ -27,13 +26,15 @@ const StyledCarousel = styled(Carousel)`
 
     height: 340px;
   }
+
+
 `
 
 const CarouselItem = styled(Carousel.Item)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 75vh;
   padding: 0 13rem;
   background-image: url(${({ background }) => background});
@@ -62,15 +63,16 @@ const CarouselItem = styled(Carousel.Item)`
 
 
 const SlideContent = styled.div`
-  width: 50%;
+  width: 70%;
   min-height: 50%;
   position: relative;
-  top: 25%;
+  top: 15%;
   color: ${({ theme }) => theme.color.tertiary};
   text-shadow: 2px 2px ${({ theme }) => theme.color.secondary};
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 55px;
+  margin:auto;
 
   h2 {
     width: 100%;
@@ -82,25 +84,8 @@ const SlideContent = styled.div`
     margin-bottom: 15px;
   }
 
-  h2::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0px;
-    height: 50%;
-    background-color: white;
-    border-radius: 5px;
-    transition: 0.5s ease;
-    z-index: -1;
-  }
-  h2:hover::before {
-    width: 100%;
-    background-color: ${({ theme }) => theme.color.secondary};
-  }
-  h2:hover {
-    transform: translateY(0px);
-  }
+
+
 
   li {
     margin-left: 50px;
@@ -114,7 +99,6 @@ const SlideContent = styled.div`
   @media (max-width: 640px) {
     width: 100%;
     top: 0;
-    /* position: static; */
     h2 {
       font-size: 2.8rem;
     }
@@ -127,20 +111,34 @@ const SlideContent = styled.div`
 const MainCarousel = () => {
   const data = useStaticQuery(query)
   const {
-    allImageSharp: { nodes },
+    slides: { nodes },
   } = data
+
   return (
-    <StyledCarousel fade interval={6000} controls={false}>
-      <CarouselItem background={nodes[1].fluid.src}>
+    <StyledCarousel fade interval={3000} >
+
+      <CarouselItem background={nodes[0].fluid.src}>
+
+      </CarouselItem>
+      <CarouselItem background={nodes[4].fluid.src}>
         <div className="shadow" />
-        {/* <StyledImage
-          className="carousel__image"
-          fluid={nodes[1].fluid}
-          alt="slide2"
-        ></StyledImage> */}
         <SlideContent>
           <h2>
-            <Link to="/psycholog">Gabinet psychologiczny</Link>
+            Gabinet fizjoterapeutyczny
+          </h2>
+          <ul>
+            <li>Masaż</li>
+            <li>Rehabilitacja wad postawy</li>
+            <li>Rehabilitacja neurologiczna</li>
+          </ul>
+        </SlideContent>
+      </CarouselItem>
+
+      <CarouselItem background={nodes[3].fluid.src}>
+        <div className="shadow" />
+        <SlideContent>
+          <h2>
+            Gabinet logopedyczny
           </h2>
           <ul>
             <li>Terapia</li>
@@ -149,18 +147,12 @@ const MainCarousel = () => {
           </ul>
         </SlideContent>
       </CarouselItem>
-      <CarouselItem background={nodes[0].fluid.src}>
+
+      <CarouselItem background={nodes[1].fluid.src}>
         <div className="shadow" />
-        {/* <StyledImage
-          className="carousel__image"
-          fluid={nodes[0].fluid}
-          alt="slide1"
-        ></StyledImage> */}
         <SlideContent>
           <h2>
-            <Link to="/terapia-sensoryczna">
-              Gabinet terapii integracji sensorycznej
-            </Link>
+             Gabinet terapii integracji sensorycznej
           </h2>
           <ul>
             <li>Terapia</li>
@@ -172,52 +164,9 @@ const MainCarousel = () => {
 
       <CarouselItem background={nodes[2].fluid.src}>
         <div className="shadow" />
-        {/* <StyledImage
-          className="carousel__image"
-          fluid={nodes[2].fluid}
-          alt="slide3"
-        ></StyledImage> */}
         <SlideContent>
           <h2>
-            <Link to="/fizjoterapia">Gabinet fizjoterapeutyczny</Link>
-          </h2>
-          <ul>
-            <li>Masaż</li>
-            <li>Rehabilitacja wad postawy</li>
-            <li>Rehabilitacja neurologiczna</li>
-          </ul>
-        </SlideContent>
-      </CarouselItem>
-      <CarouselItem background={nodes[4].fluid.src}>
-        <div className="shadow" />
-        {/* <StyledImage
-          className="carousel__image"
-          fluid={nodes[4].fluid}
-          alt="slide4"
-        ></StyledImage> */}
-        <SlideContent>
-          <h2>
-            <Link to="/logopeda">Gabinet logopedyczny</Link>
-          </h2>
-          <ul>
-            <li>Terapia</li>
-            <li>Diagnoza</li>
-            <li>Konsultacje</li>
-          </ul>
-        </SlideContent>
-      </CarouselItem>
-      <CarouselItem background={nodes[3].fluid.src}>
-        <div className="shadow" />
-        {/* <StyledImage
-          className="carousel__image"
-          fluid={nodes[3].fluid}
-          alt="slide4"
-        ></StyledImage> */}
-        <SlideContent>
-          <h2>
-            <Link to="/terapia-pedagogiczna">
-              Gabinet terapii pedagogicznej
-            </Link>
+             Gabinet terapii pedagogicznej 
           </h2>
           <ul>
             <li>Bajkoterapia</li>
@@ -226,15 +175,23 @@ const MainCarousel = () => {
           </ul>
         </SlideContent>
       </CarouselItem>
+
     </StyledCarousel>
   )
 }
 
 const query = graphql`
   {
-    allImageSharp(filter: { fluid: { originalName: { regex: "/slide/" } } }) {
+    slides:allImageSharp(filter: { fluid: { originalName: { regex: "/slide/" } } }) {
       nodes {
         fluid(maxWidth: 2400) {
+          src
+        }
+      }
+    }
+    firstSlide: allImageSharp (filter: { fluid: { originalName: { regex: "/placówka/" } } }) {
+      nodes{
+        fluid(maxWidth:2400){
           src
         }
       }

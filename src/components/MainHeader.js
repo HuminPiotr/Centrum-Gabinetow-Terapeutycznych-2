@@ -35,6 +35,7 @@ const StyledWrapper = styled.div`
   .menu-btn.active + nav {
     transform: translateX(0px);
   }
+
 `
 
 const MainHeader = () => {
@@ -54,7 +55,7 @@ const MainHeader = () => {
 
 const query = graphql`
   {
-    allFile(filter: { name: { eq: "header" } }) {
+    allFile(filter: { name: { eq: "header2" } }) {
       nodes {
         publicURL
       }

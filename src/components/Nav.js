@@ -47,7 +47,7 @@ const StyledWrapper = styled.nav`
   }
 `
 const activeStyles = {
-  color: "#EDBA5F",
+  color: "#7EBDC2",
 }
 
 const Nav = () => (

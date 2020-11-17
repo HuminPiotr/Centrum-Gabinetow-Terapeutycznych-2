@@ -8,6 +8,8 @@ const StyledWrapper = styled.div`
   width: 100%;
   z-index: 5;
 
+
+
   @media (max-width: 640px) {
     display: flex;
     flex-direction: column;
@@ -22,7 +24,6 @@ const StyledWrapper = styled.div`
 
 const CompleteNavigation = () => (
   <StyledWrapper>
-    <TopNav></TopNav>
     <MainHeader></MainHeader>
   </StyledWrapper>
 )

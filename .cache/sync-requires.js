@@ -14,7 +14,6 @@ exports.components = {
   "component---src-pages-kontakt-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\kontakt.js"))),
   "component---src-pages-logopeda-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\logopeda.js"))),
   "component---src-pages-o-nas-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\o-nas.js"))),
-  "component---src-pages-psycholog-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\psycholog.js"))),
   "component---src-pages-terapia-pedagogiczna-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\terapia-pedagogiczna.js"))),
   "component---src-pages-terapia-sensoryczna-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\terapia-sensoryczna.js"))),
   "component---src-pages-using-typescript-tsx": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\using-typescript.tsx")))

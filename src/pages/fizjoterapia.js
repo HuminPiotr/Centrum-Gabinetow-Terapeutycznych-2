@@ -55,6 +55,7 @@ const StyledWrapper = styled.div`
   .info {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 
     h2 {
       margin-bottom: 25px;
@@ -79,6 +80,7 @@ const StyledWrapper = styled.div`
     .person {
       flex-direction: column;
       text-align: center;
+      margin-top: 50%;
 
       &__text {
         margin: 0;
@@ -92,7 +94,43 @@ const FizjoterapiaPage = ({ data }) => {
   return (
     <>
       <StyledWrapper>
+
+
+
+
         <h1>Gabinet fizjoterapii</h1>
+
+
+        <div className="person" id="person">
+          <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
+          <div className="person__text">
+            <h2> {data.person.nodes[0].imienazwisko} </h2>
+            <p>
+            Absolwentka Akademii Wychowania fizycznego na kierunku : Fizjoterapia
+            </p>
+            <p>Kursy i szkolenia:</p>
+            <ul>
+              <li>FITS (Funkcjonalna Indywididualna Terapia Skolioz)</li>
+              <li>IBITA Bobath dla dorosłych</li>
+              <li>Kinezjotaping podstawowy</li>
+              <li>PNF podstawowy</li>
+              <li>rozwijający</li>
+              <li>Masaż głęboki</li>
+              <li>Kurs Masażu Klasycznego oraz Kurs Masażu dla Zaawansowanych (drugiego stopnia)</li>
+              <li>Hipoterapia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="info">
+          <div>
+            <h2>Zadzwoń i umów się na wizytę!</h2>
+            <HeaderIcon
+              icon={"/icon-phone2.jpg"}
+              title={data.person.nodes[0].telefon}
+            />
+          </div>
+        </div>
         <div className="content">
           <div className="content__text">
             <h2>Rehabilitacja wad postawy u dzieci i dorosłych</h2>
@@ -122,29 +160,7 @@ const FizjoterapiaPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="person" id="person">
-          <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
-          <div className="person__text">
-            <h2> {data.person.nodes[0].imienazwisko} </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              pretium elit ac nisl feugiat, id porttitor felis mattis. Fusce
-              nulla ante, ornare sit amet est et, semper aliquet ex. Duis
-              finibus lobortis sollicitudin. Quisque maximus volutpat
-              condimentum.
-            </p>
-          </div>
-        </div>
 
-        <div className="info">
-          <div>
-            <h2>Zadzwoń i umów się na wizytę!</h2>
-            <HeaderIcon
-              icon={"/icon-phone2.jpg"}
-              title={data.person.nodes[0].telefon}
-            />
-          </div>
-        </div>
       </StyledWrapper>
     </>
   )
@@ -162,7 +178,7 @@ export const query = graphql`
       }
     }
     person: allDatoCmsProfileOsobowe(
-      filter: { zawD: { eq: "fizjoterapeuta" } }
+      filter: { zawD: { eq: "Fizjoterapeuta" } }
     ) {
       nodes {
         fotografia {

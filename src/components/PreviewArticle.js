@@ -61,6 +61,7 @@ const StyledPreviewArticle = styled.div`
         width: 100%;
       }
 
+
       @media (max-width: 640px) {
         flex-direction: column;
         align-content: center;

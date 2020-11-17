@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
 
   transition: 0.3s;
   &:hover {
-    background-color: ${({ theme }) => theme.color.quaternary};
+    background-color: ${({ theme }) => theme.color.tertiary};
   }
 `
 

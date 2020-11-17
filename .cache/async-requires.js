@@ -11,7 +11,6 @@ exports.components = {
   "component---src-pages-kontakt-js": () => import("./../../src/pages/kontakt.js" /* webpackChunkName: "component---src-pages-kontakt-js" */),
   "component---src-pages-logopeda-js": () => import("./../../src/pages/logopeda.js" /* webpackChunkName: "component---src-pages-logopeda-js" */),
   "component---src-pages-o-nas-js": () => import("./../../src/pages/o-nas.js" /* webpackChunkName: "component---src-pages-o-nas-js" */),
-  "component---src-pages-psycholog-js": () => import("./../../src/pages/psycholog.js" /* webpackChunkName: "component---src-pages-psycholog-js" */),
   "component---src-pages-terapia-pedagogiczna-js": () => import("./../../src/pages/terapia-pedagogiczna.js" /* webpackChunkName: "component---src-pages-terapia-pedagogiczna-js" */),
   "component---src-pages-terapia-sensoryczna-js": () => import("./../../src/pages/terapia-sensoryczna.js" /* webpackChunkName: "component---src-pages-terapia-sensoryczna-js" */),
   "component---src-pages-using-typescript-tsx": () => import("./../../src/pages/using-typescript.tsx" /* webpackChunkName: "component---src-pages-using-typescript-tsx" */)

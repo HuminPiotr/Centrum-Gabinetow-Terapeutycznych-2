@@ -1,9 +1,13 @@
 export const theme = {
   color: {
-    primary: "#4D1FAB",
-    secondary: "#EDBA5F",
-    tertiary: "#170A31",
-    quaternary: "#6228e0",
+    // primary: "#4D1FAB",
+    // secondary: "#EDBA5F",
+    // tertiary: "#170A31",
+    // quaternary: "#6228e0",
+    primary: "#3C6997",
+    secondary: "#7EBDC2",
+    tertiary: "#1B1725",
+    quaternary: "#A5D8FF",
   },
   fontWeight: {
     basic: 400,
@@ -17,3 +21,4 @@ export const theme = {
     veryBig: "4rem",
   },
 }
+
