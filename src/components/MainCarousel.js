@@ -117,10 +117,10 @@ const MainCarousel = () => {
   return (
     <StyledCarousel fade interval={3000} >
 
-      <CarouselItem background={nodes[0].fluid.src}>
+      <CarouselItem background={nodes[1].fluid.src}>
 
       </CarouselItem>
-      <CarouselItem background={nodes[4].fluid.src}>
+      <CarouselItem background={nodes[0].fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -134,7 +134,7 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem background={nodes[3].fluid.src}>
+      <CarouselItem background={nodes[4].fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>
@@ -148,7 +148,7 @@ const MainCarousel = () => {
         </SlideContent>
       </CarouselItem>
 
-      <CarouselItem background={nodes[1].fluid.src}>
+      <CarouselItem background={nodes[3].fluid.src}>
         <div className="shadow" />
         <SlideContent>
           <h2>

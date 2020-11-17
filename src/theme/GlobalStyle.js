@@ -46,6 +46,21 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         font-family: 'Open Sans', sans-serif;
     }
+
+
+    
+    .hero{
+        display: flex;
+        nav{
+    width: 40%
+  }
+  @media (max-width: 640px) {
+    flex-direction: column;
+    nav{
+      width:100%;
+    }
+  }
+    }
 `
 
 export default GlobalStyle

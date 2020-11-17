@@ -8,23 +8,13 @@ import LatestArticles from "../components/LatestArticles"
 import TopNav from '../components/TopNav'
 
 const StyledWrapper = styled.div`
-  display: flex;
-  nav{
-    width: 40%
-  }
-  @media (max-width: 640px) {
-    flex-direction: column;
-    nav{
-      width:100%;
-    }
-  }
+
 
 `
 
 
 const IndexPage = () => (
   <>
-    {/* <SEO title="Home" /> */}
     <StyledWrapper class="hero">
       <TopNav />
       <MainCarousel />
