@@ -79,13 +79,13 @@ const PersonBall = ({ photo, title, subtitle, second, link=false }) => {
       <div>
         {link ? 
           <Link to={`${linkName}#person`}><Image className="photo" fluid={photo.fluid} />
-              <img className="wave" src="/fala.svg" alt="wave"></img>
+              <img className="wave" src="/fala2.svg" alt="wave"></img>
               <p className="title">{title}</p>
               <p className="subtitle">{subtitle}</p>
           </Link>
           : <> 
           <Image className="photo" fluid={photo.fluid} />
-          <img className="wave" src="/fala.svg" alt="wave"></img>
+          <img className="wave" src="/fala2.svg" alt="wave"></img>
           <p className="title">{title}</p>
           <p className="subtitle">{subtitle}</p>
           </>
