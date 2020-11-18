@@ -3,7 +3,7 @@ import SEO from "../components/seo"
 import styled from 'styled-components'
 
 import MainCarousel from "../components/MainCarousel"
-import Citation from "../components/Citation"
+// import Citation from "../components/Citation"
 import LatestArticles from "../components/LatestArticles"
 import TopNav from '../components/TopNav'
 
@@ -20,7 +20,7 @@ const IndexPage = () => (
       <TopNav />
       <MainCarousel />
     </StyledWrapper>
-    <Citation></Citation>
+    {/* <Citation></Citation> */}
     <LatestArticles />
   </>
 )
