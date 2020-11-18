@@ -27,13 +27,12 @@ const StyledWrapper = styled.div`
   }
   .content {
     display: flex;
-
-    &__logo {
+  }
+  .logo {
       position: absolute;
       right: 0;
       top: 200px;
     }
-  }
   .person {
     display: flex;
     align-items: center;
@@ -42,8 +41,15 @@ const StyledWrapper = styled.div`
     h2 {
       font-size: ${({ theme }) => theme.fontSize.big};
     }
+    .personBall{
+        width: 25%;
+    }
+    &__logo{
+        width:15%;
+        text-align: right;
+    }
     &__text {
-      width: 70%;
+      width: 60%;
       margin-left: 25px;
     }
     p {
@@ -64,6 +70,17 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.fontSize.basic};
     }
   }
+  .headerIcon{
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    margin-bottom: 45px;
+      h3{
+        color: black;
+        font-size: ${({ theme }) => theme.fontSize.big};
+        font-weight: ${({theme}) => theme.fontWeight.bold}
+      }
+    }
   @media (max-width: 640px) {
     margin: 25px;
 
@@ -80,6 +97,11 @@ const StyledWrapper = styled.div`
         margin: 0;
         width: 100%;
       }
+      &__logo{
+        text-align: center;
+        order: -1;
+        width:100%;
+      }
     }
   }
 `
@@ -88,47 +110,8 @@ const TerapiaSensorycznaPage = ({ data }) => (
   <>
     <StyledWrapper>
       <h1>Gabinet integracji sensorycznej</h1>
-      <div className="content">
-        <div className="content__text">
-          <h2>
-            Intrgracja Sensoryczna zalecana dla osób u których występują
-            trudności w zakresie:
-          </h2>
-          <ul>
-            <li>umiejętności ruchowych,</li>
-            <li>problemów emocjonalnych,</li>
-            <li>opóźniony rozwój mowy,</li>
-            <li>opanowania umiejętności szkolnych,</li>
-            <li>nadpobudliwości psychoruchowej,</li>
-            <li>nadwrażliwośći na ruch.</li>
-          </ul>
-          <h2>Terapia ręki</h2> <p> - w czym pomaga terapia ręki?</p>
-          <ul>
-            <li>poprawia napięcie mięśniowe kończyny górnej,</li>
-            <li>pomaga wypracować prawidłowy chwyt ręki,</li>
-            <li>kształtuje koordynację wzrokowo - ruchową (oko - ręka),</li>
-            <li>rozwija precyzyjne ruchy ręki,</li>
-            <li>wydłuża zdolność koncentracji uwagi.</li>
-          </ul>
-          <h2>Terapia neurotaktylna</h2>
-          <p>
-            Jest wykorzystywana zarówno u dzieci, jak i dorosłych podczas pracy
-            z:
-          </p>
-          <ul>
-            <li>porażeniami mózgowymi,</li>
-            <li>autyzmen,</li>
-            <li>zachowaniami agresywnymi,</li>
-            <li>lękami i fobiami,</li>
-            <li>opóźnieniami w rozwoju umysłowym.</li>
-          </ul>
-        </div>
 
-        <div className="content__logo">
-          <Image fixed={data.logo.nodes[0].fixed} />
-        </div>
-      </div>
-
+      
       <div className="person" id="person">
         <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
         <div className="person__text">
@@ -169,6 +152,9 @@ const TerapiaSensorycznaPage = ({ data }) => (
             samego dziecka, ale także na funkcjonowanie całej rodziny.
           </p>
         </div>
+        <div className="person__logo">
+          <Image fixed={data.logo.nodes[0].fixed} />
+        </div>
       </div>
 
       <div className="info">
@@ -180,6 +166,45 @@ const TerapiaSensorycznaPage = ({ data }) => (
           />
         </div>
       </div>
+      <div className="content">
+        <div className="content__text">
+          <h2>
+            Intrgracja Sensoryczna zalecana dla osób u których występują
+            trudności w zakresie:
+          </h2>
+          <ul>
+            <li>umiejętności ruchowych,</li>
+            <li>problemów emocjonalnych,</li>
+            <li>opóźniony rozwój mowy,</li>
+            <li>opanowania umiejętności szkolnych,</li>
+            <li>nadpobudliwości psychoruchowej,</li>
+            <li>nadwrażliwośći na ruch.</li>
+          </ul>
+          <h2>Terapia ręki</h2> <p> - w czym pomaga terapia ręki?</p>
+          <ul>
+            <li>poprawia napięcie mięśniowe kończyny górnej,</li>
+            <li>pomaga wypracować prawidłowy chwyt ręki,</li>
+            <li>kształtuje koordynację wzrokowo - ruchową (oko - ręka),</li>
+            <li>rozwija precyzyjne ruchy ręki,</li>
+            <li>wydłuża zdolność koncentracji uwagi.</li>
+          </ul>
+          <h2>Terapia neurotaktylna</h2>
+          <p>
+            Jest wykorzystywana zarówno u dzieci, jak i dorosłych podczas pracy
+            z:
+          </p>
+          <ul>
+            <li>porażeniami mózgowymi,</li>
+            <li>autyzmen,</li>
+            <li>zachowaniami agresywnymi,</li>
+            <li>lękami i fobiami,</li>
+            <li>opóźnieniami w rozwoju umysłowym.</li>
+          </ul>
+        </div>
+
+
+      </div>
+
     </StyledWrapper>
   </>
 )
@@ -195,7 +220,7 @@ export const query = graphql`
         }
       }
     }
-    person: allDatoCmsProfileOsobowe(filter: { zawD: { eq: "terapeuta SI" } }) {
+    person: allDatoCmsProfileOsobowe(filter: { zawD: { eq: "Terapeuta SI" } }) {
       nodes {
         fotografia {
           fluid {

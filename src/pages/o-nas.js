@@ -60,7 +60,9 @@ const StyledWrapper = styled.div`
 `
 
 const ONasPage = ({ data }) => {
+
   const personBallList = data.allDatoCmsProfileOsobowe.nodes.map(item => (
+    
     <div className="personBall">
       <PersonBall
         photo={item.fotografia}

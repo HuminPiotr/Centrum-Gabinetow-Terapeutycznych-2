@@ -31,6 +31,11 @@ const StyledWrapper = styled.div`
     top: 0;
     left: 0;
   }
+  @media (min-width:2100px){
+    background: ${({theme}) => theme.color.primary};
+    min-height: 20vh;
+    margin-bottom:50px;
+  }
 
   .menu-btn.active + nav {
     transform: translateX(0px);

@@ -25,6 +25,8 @@ const StyledWrapper = styled.div`
     font-weight: ${({ theme }) => theme.fontWeight.veryBold};
   }
 
+
+
   ul {
     margin-left: 50px;
     margin-bottom: 50px;
@@ -33,11 +35,6 @@ const StyledWrapper = styled.div`
   .content {
     display: flex;
 
-    &__logo {
-      margin-left: 50px;
-      align-items: flex-start;
-      height: 100%;
-    }
     &__text {
       p {
         display: block;
@@ -54,8 +51,15 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.fontSize.big};
     }
     &__text {
-      width: 70%;
+      width: 50%;
       margin-left: 25px;
+    }
+    .personBall{
+        width: 25%;
+    }
+    &__logo{
+        width:25%;
+        text-align: right;
     }
   }
   .info {
@@ -101,6 +105,17 @@ const StyledWrapper = styled.div`
       margin: 5px;
     }
   }
+  .headerIcon{
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    margin-bottom: 45px;
+      h3{
+        color: black;
+        font-size: ${({ theme }) => theme.fontSize.big};
+        font-weight: ${({theme}) => theme.fontWeight.bold}
+      }
+    }
   @media (max-width: 640px) {
     margin: 25px;
 
@@ -121,6 +136,11 @@ const StyledWrapper = styled.div`
           text-align: left;
         }
       }
+      &__logo{
+        text-align: center;
+        order: -1;
+        width:100%;
+      }
     }
     .galery {
       &__photos {
@@ -137,6 +157,45 @@ const LogopedaPage = ({ data }) => (
   <>
     <StyledWrapper>
       <h1>Gabinet logopedyczny</h1>
+
+      <div className="person" id="person"> 
+        <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
+        <div className="person__text">
+          <h2> {data.person.nodes[0].imienazwisko} </h2>
+          <p>
+            Uwielbiam być wśród ludzi i im pomagać. Mam szczęście, że moja pasja
+            jest moją pracą – jestem logopedą, pedagogiem oraz terapeutą ręki.
+            Dodatkowo społecznie jestem prezesem dwóch stowarzyszeń:
+            stowarzyszenie „Przyjazna Szkoła Bez Barier” oraz stowarzyszenie
+            „Rodzinne Ogrody Działkowe „Malwa” w Białej Podlaskiej. Ukończyłam
+            studia na kierunkach pedagogika kształcenie zintegrowane i
+            wychowanie przedszkolne, informatyka nauczycielska oraz logopedia.
+            Po studiach zdobywałam doświadczenie jako pedagog, logopeda i
+            informatyk w placówkach oświatowych. Zdobyte kwalifikacje oraz
+            umiejętności pozwoliły mi na tworzeniu własnych pomocy
+            terapeutycznych a także umieszczanie filmików na kanale youtube z
+            pomysłami dla dzieci na ćwiczenia logopedyczne. Nawiązałam
+            współpracę z osobami, które tak jak ja z pasją i zaangażowaniem
+            realizują swoje marzenia wierząc, że ich ciężka praca ma sens. W
+            lutym 2020 roku otworzyłam własny gabinet terapeutyczny.
+          </p>
+        </div>
+
+        <div className="person__logo">
+          <Image fixed={data.logo.nodes[0].fixed} />
+        </div>
+      </div>
+
+      <div className="info">
+        <div>
+          <h2>Zadzwoń i umów się na wizytę!</h2>
+          <HeaderIcon
+            icon={"/icon-phone2.jpg"}
+            title={data.person.nodes[0].telefon}
+          />
+        </div>
+      </div>
+
       <div className="content">
         <div className="content__text">
           <p>
@@ -166,9 +225,7 @@ const LogopedaPage = ({ data }) => (
           </p>
         </div>
 
-        <div className="content__logo">
-          <Image fixed={data.logo.nodes[0].fixed} />
-        </div>
+
       </div>
       <h2>
         Serdecznie zapraszam na indywidualną terapię logopedyczną do swojego
@@ -207,43 +264,7 @@ const LogopedaPage = ({ data }) => (
         </ButtonLink>
       </div>
 
-      <div className="person" id="person"> 
-        <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
-        <div className="person__text">
-          <h2> {data.person.nodes[0].imienazwisko} </h2>
-          <p>
-            Uwielbiam być wśród ludzi i im pomagać. Mam szczęście, że moja pasja
-            jest moją pracą – jestem logopedą, pedagogiem oraz terapeutą ręki.
-            Dodatkowo społecznie jestem prezesem dwóch stowarzyszeń:
-            stowarzyszenie „Przyjazna Szkoła Bez Barier” oraz stowarzyszenie
-            „Rodzinne Ogrody Działkowe „Malwa” w Białej Podlaskiej. Ukończyłam
-            studia na kierunkach pedagogika kształcenie zintegrowane i
-            wychowanie przedszkolne, informatyka nauczycielska oraz logopedia.
-            Po studiach zdobywałam doświadczenie jako pedagog, logopeda i
-            informatyk w placówkach oświatowych. Zdobyte kwalifikacje oraz
-            umiejętności pozwoliły mi na tworzeniu własnych pomocy
-            terapeutycznych a także umieszczanie filmików na kanale youtube z
-            pomysłami dla dzieci na ćwiczenia logopedyczne. Nawiązałam
-            współpracę z osobami, które tak jak ja z pasją i zaangażowaniem
-            realizują swoje marzenia wierząc, że ich ciężka praca ma sens. W
-            lutym 2020 roku otworzyłam własny gabinet terapeutyczny.
-          </p>
-        </div>
-      </div>
 
-      <div className="info">
-        <div>
-          <h2>Zadzwoń i umów się na wizytę!</h2>
-          <HeaderIcon
-            icon={"/icon-phone2.jpg"}
-            title={data.person.nodes[0].telefon}
-          />
-        </div>
-        <div>
-          <h2>Cennik:</h2>
-          <p>??????????????????????</p>
-        </div>
-      </div>
     </StyledWrapper>
   </>
 )
@@ -269,7 +290,7 @@ export const query = graphql`
       }
     }
     person: allDatoCmsProfileOsobowe(
-      filter: { zawD: { regex: "/logopeda/" } }
+      filter: { zawD: { regex: "/Logopeda/" } }
     ) {
       nodes {
         fotografia {

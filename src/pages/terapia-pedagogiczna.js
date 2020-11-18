@@ -63,6 +63,16 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.fontSize.basic};
     }
   }
+  .headerIcon{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+      h3{
+        color: black;
+        font-size: ${({ theme }) => theme.fontSize.big};
+        font-weight: ${({theme}) => theme.fontWeight.bold}
+      }
+    }
   @media (max-width: 640px) {
     margin: 25px;
 
@@ -95,12 +105,7 @@ const FizjoterapiaPage = ({ data }) => {
       <StyledWrapper>
         <h1>Gabinet terapii pedagogicznej</h1>
         <div className="content">
-          <div className="content__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            impedit voluptatem minus provident esse molestiae earum molestias,
-            distinctio sint, nihil eveniet, doloribus aut assumenda
-            reprehenderit sit doloremque deleniti dignissimos corporis.
-          </div>
+
 
           <div className="content__logo">
             {/* <Image fixed={data.logo.nodes[0].fixed} /> */}
@@ -139,10 +144,7 @@ const FizjoterapiaPage = ({ data }) => {
               title={data.person.nodes[0].telefon}
             />
           </div>
-          <div>
-            <h2>Cennik:</h2>
-            <p>???????????????????</p>
-          </div>
+
         </div>
       </StyledWrapper>
     </>

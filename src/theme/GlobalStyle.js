@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
     .hero{
         display: flex;
         nav{
-            width: 40%;
+            width: 20%;
          }
         }
   @media (max-width: 640px) {

@@ -22,7 +22,7 @@ const StyledFooter = styled.footer`
   }
 
   .phone {
-    /* text-transform: capitalize; */
+    text-transform: capitalize;
   }
   .address {
     margin-right: 10%;

@@ -53,27 +53,29 @@ const StyledPersonBall = styled.div`
 `
 
 const PersonBall = ({ photo, title, subtitle, second, link=false }) => {
-  console.log(subtitle);
+  const key = String(subtitle);
   let linkName;
-  switch(subtitle){
-    case 'psycholog':
+  const subtitleUpperCase = key.toUpperCase();
+
+  switch(subtitleUpperCase){
+    case 'PSYCHOLOG':
       linkName='/psycholog'
       break;
-    case 'pedagog':
+    case 'PEDAGOG':
         linkName='/terapia-pedagogiczna'
         break;
-    case 'logopeda, pedagog':
+    case 'LOGOPEDA':
           linkName='/logopeda'
           break;
-    case 'fizjoterapeuta':
+    case 'FIZJOTERAPEUTA':
       linkName='/fizjoterapia'
       break;
-    case 'terapeuta SI':
+    case 'TERAPEUTA SI':
       linkName='/terapia-sensoryczna'
       break;
   }
   return (
-    <StyledPersonBall second={second}>
+    <StyledPersonBall class="personBall" second={second}>
       <div>
         {link ? 
           <Link to={`${linkName}#person`}><Image className="photo" fluid={photo.fluid} />

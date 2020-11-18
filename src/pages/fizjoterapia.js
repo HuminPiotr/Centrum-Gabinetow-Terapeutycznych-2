@@ -29,29 +29,51 @@ const StyledWrapper = styled.div`
   }
   .content {
     display: flex;
-
-    &__logo {
-      position: absolute;
-      right: 0;
-    }
   }
+
+  /* .logo {
+        width:100%;
+        text-align:right;
+    } */
+
   .person {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 50px 0;
-
+    position: relative;
     h2 {
       font-size: ${({ theme }) => theme.fontSize.big};
     }
+    .personBall{
+        width: 25%;
+    }
+    &__logo{
+        width:25%;
+        text-align: right;
+    }
+
 
     &__text {
-      width: 70%;
+      width: 50%;
       margin-left: 25px;
       p {
         text-align: left;
       }
     }
   }
+  .headerIcon{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+      h3{
+        color: black;
+        font-size: ${({ theme }) => theme.fontSize.big};
+        font-weight: ${({theme}) => theme.fontWeight.bold}
+      }
+    }
+
+
   .info {
     display: flex;
     justify-content: center;
@@ -60,32 +82,36 @@ const StyledWrapper = styled.div`
     h2 {
       margin-bottom: 25px;
     }
-    h3 {
-      color: black;
-      font-weight: ${({ theme }) => theme.fontWeight.bold};
-    }
+
     p {
       font-size: ${({ theme }) => theme.fontSize.basic};
     }
+
   }
 
   @media (max-width: 640px) {
     margin: 25px;
 
-    .content {
-      &__logo {
-        display: none;
-      }
-    }
     .person {
       flex-direction: column;
       text-align: center;
-      margin-top: 50%;
+      
 
       &__text {
         margin: 0;
         width: 100%;
+
+        ul{
+          text-align: left;
+        }
       }
+
+      &__logo{
+        text-align: center;
+        order: -1;
+        width:100%;
+      }
+
     }
   }
 `
@@ -94,12 +120,7 @@ const FizjoterapiaPage = ({ data }) => {
   return (
     <>
       <StyledWrapper>
-
-
-
-
         <h1>Gabinet fizjoterapii</h1>
-
 
         <div className="person" id="person">
           <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
@@ -120,14 +141,19 @@ const FizjoterapiaPage = ({ data }) => {
               <li>Hipoterapia</li>
             </ul>
           </div>
+          <div className="person__logo">
+            <Image fixed={data.logo.nodes[0].fixed} />
+        </div>
+
         </div>
 
         <div className="info">
-          <div>
+          <div >
             <h2>Zadzwoń i umów się na wizytę!</h2>
             <HeaderIcon
               icon={"/icon-phone2.jpg"}
               title={data.person.nodes[0].telefon}
+              
             />
           </div>
         </div>
@@ -155,9 +181,7 @@ const FizjoterapiaPage = ({ data }) => {
             </ul>
           </div>
 
-          <div className="content__logo">
-            <Image fixed={data.logo.nodes[0].fixed} />
-          </div>
+
         </div>
 
 

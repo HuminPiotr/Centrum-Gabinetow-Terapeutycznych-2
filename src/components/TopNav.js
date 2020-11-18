@@ -9,7 +9,7 @@ const StyledWrapper = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: ${({ theme }) => theme.fontSize.basic};
   text-align: left;
   ul {
@@ -23,15 +23,22 @@ const StyledWrapper = styled.nav`
     width: 100%;
     list-style-type: none;
     font-weight: ${({ theme }) => theme.fontWeight.bold};
-    padding-left: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     li {
-      margin-bottom: 10px;
-      padding-left: 25px;
+      margin-bottom: 1.5vw;
+      padding-left: 5px;
       transition: 0.2s;
       width: 100%;
       cursor: pointer;
       transition: .5s;
+
+      a{
+        display: flex;
+        align-items: center;
+      }
+      
     }
     li:hover {
       color: ${({ theme }) => theme.color.primary};
@@ -47,17 +54,22 @@ const StyledWrapper = styled.nav`
       margin-right: 15px;
       transition: .3s;
     }
+    .text{
+      text-align: left;
+    }
+
   }
   @media (max-width: 640px) {
     
-    font-size: ${(props) => props.theme.fontSize.basic};
-    margin-top: 35vh;
+    font-size: ${(props) => props.theme.fontSize.small};
+    /* margin-top: 35vh; */
     /* justify-content: flex-start; */
     ul {
       flex-direction: row;
       justify-content: center;
       align-content: center;
       padding: 15px;
+      margin: 0 5%;
       li {
         padding: 0;
         margin: 10px 0;
@@ -97,7 +109,7 @@ const TopNav = () => (
         <svg width="15" height="25" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 30L12.5 17.5L0 5L2.5 0L20 17.5L2.5 35L0 30Z" fill="black"/>
       </svg>
-          Terapia <br/> integracji sensorycznej
+          Terapia <br/> integracji <br />sensorycznej
         </Link>
       </li>
       <li>
@@ -105,7 +117,9 @@ const TopNav = () => (
         <svg width="15" height="25" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 30L12.5 17.5L0 5L2.5 0L20 17.5L2.5 35L0 30Z" fill="black"/>
       </svg>
-          Terapia <br/> pedagogiczna
+
+            Terapia <br/> pedagogiczna
+  
         </Link>
       </li>
     </ul>
