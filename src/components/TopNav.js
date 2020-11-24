@@ -9,10 +9,10 @@ const StyledWrapper = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
-  /* text-transform: uppercase; */
   font-size: ${({ theme }) => theme.fontSize.basic};
   text-align: left;
   z-index: 10;
+
   ul {
     display: flex;
     justify-content: center;
@@ -78,6 +78,12 @@ const StyledWrapper = styled.nav`
         margin: 10px 0;
         flex-basis: 50%;
       }
+    }
+  }
+
+  @media (min-width: 1599px){
+    ul{
+      margin-top:0;
     }
   }
 `
