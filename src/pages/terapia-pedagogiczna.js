@@ -52,6 +52,8 @@ const StyledWrapper = styled.div`
   .info {
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    margin-bottom: 50px;
     h2 {
       margin-bottom: 25px;
     }

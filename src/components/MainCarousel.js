@@ -115,9 +115,10 @@ const MainCarousel = () => {
   return (
     <StyledCarousel fade interval={3000} >
 
-      <CarouselItem background={data.first.fluid.src}>
+      {/* <CarouselItem background={data.first.fluid.src}>
 
-      </CarouselItem>
+      </CarouselItem> */}
+
       <CarouselItem background={data.fizjo.fluid.src}>
         <div className="shadow" />
         <SlideContent>
@@ -180,11 +181,7 @@ const MainCarousel = () => {
 
 const query = graphql`
   {
-    first: imageSharp(fluid: {originalName: {regex: "/first-slide/"}}){
-      fluid(maxWidth:2400){
-        src
-      }
-    }
+
       fizjo: imageSharp(fluid: {originalName: {regex: "/fizjoterapia-slide/"}}){
       fluid(maxWidth:2400){
         src

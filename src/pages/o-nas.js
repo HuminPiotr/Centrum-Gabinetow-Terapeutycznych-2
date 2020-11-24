@@ -41,6 +41,7 @@ const StyledWrapper = styled.div`
 
     .personBall {
       margin: 15px 25px;
+      min-width: 34%;
     }
   }
   @media (max-width: 640px) {
@@ -82,7 +83,7 @@ const ONasPage = ({ data }) => {
           <div className="description__text">
             <h2>Kim jesteśmy?</h2>
             <p>
-              Terapeuta, psycholog, fizjoterapeuta, pedagog i logopeda, których
+              Terapeuta, fizjoterapeuta, pedagog i logopeda, których
               łączy miłość do ludzi i pragnienie, aby pomagać im w jak
               najbardziej efektywny sposób. My nie rozmawiamy o problemach, my
               staramy się z nimi zmierzyć!

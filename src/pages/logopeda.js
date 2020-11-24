@@ -41,6 +41,10 @@ const StyledWrapper = styled.div`
         width: 100%;
       }
     }
+    &__logo{
+        margin: 25px auto;
+        align-self: center;
+    }
   }
   .person {
     display: flex;
@@ -51,16 +55,13 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.fontSize.big};
     }
     &__text {
-      width: 50%;
+      width:70%;
       margin-left: 25px;
     }
     .personBall{
         width: 25%;
     }
-    &__logo{
-        width:25%;
-        text-align: right;
-    }
+
   }
   .info {
     display: flex;
@@ -120,9 +121,7 @@ const StyledWrapper = styled.div`
     margin: 25px;
 
     .content {
-      &__logo {
-        display: none;
-      }
+        flex-wrap: wrap;
     }
     .person {
       flex-direction: column;
@@ -181,20 +180,9 @@ const LogopedaPage = ({ data }) => (
           </p>
         </div>
 
-        <div className="person__logo">
-          <Image fixed={data.logo.nodes[0].fixed} />
-        </div>
+   
       </div>
 
-      <div className="info">
-        <div>
-          <h2>Zadzwoń i umów się na wizytę!</h2>
-          <HeaderIcon
-            icon={"/icon-phone2.jpg"}
-            title={data.person.nodes[0].telefon}
-          />
-        </div>
-      </div>
 
       <div className="content">
         <div className="content__text">
@@ -225,12 +213,16 @@ const LogopedaPage = ({ data }) => (
           </p>
         </div>
 
-
+        <div className="content__logo">
+          <Image fixed={data.logo.nodes[0].fixed} />
+      </div>
       </div>
       <h2>
         Serdecznie zapraszam na indywidualną terapię logopedyczną do swojego
         gabinetu.
       </h2>
+
+
 
       <div className="galery">
         <h2>Ćwiczenia oddechowe</h2>
@@ -264,7 +256,16 @@ const LogopedaPage = ({ data }) => (
         </ButtonLink>
       </div>
 
-
+            
+      <div className="info">
+        <div>
+          <h2>Zadzwoń i umów się na wizytę!</h2>
+          <HeaderIcon
+            icon={"/icon-phone2.jpg"}
+            title={data.person.nodes[0].telefon}
+          />
+        </div>
+      </div>
     </StyledWrapper>
   </>
 )

@@ -147,16 +147,7 @@ const FizjoterapiaPage = ({ data }) => {
 
         </div>
 
-        <div className="info">
-          <div >
-            <h2>Zadzwoń i umów się na wizytę!</h2>
-            <HeaderIcon
-              icon={"/icon-phone2.jpg"}
-              title={data.person.nodes[0].telefon}
-              
-            />
-          </div>
-        </div>
+
         <div className="content">
           <div className="content__text">
             <h2>Rehabilitacja wad postawy u dzieci i dorosłych</h2>
@@ -182,6 +173,16 @@ const FizjoterapiaPage = ({ data }) => {
           </div>
 
 
+        </div>
+        <div className="info">
+          <div >
+            <h2>Zadzwoń i umów się na wizytę!</h2>
+            <HeaderIcon
+              icon={"/icon-phone2.jpg"}
+              title={data.person.nodes[0].telefon}
+              
+            />
+          </div>
         </div>
 
 

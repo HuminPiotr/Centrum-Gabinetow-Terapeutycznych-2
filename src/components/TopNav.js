@@ -12,6 +12,7 @@ const StyledWrapper = styled.nav`
   /* text-transform: uppercase; */
   font-size: ${({ theme }) => theme.fontSize.basic};
   text-align: left;
+  z-index: 10;
   ul {
     display: flex;
     justify-content: center;
@@ -25,6 +26,8 @@ const StyledWrapper = styled.nav`
     font-weight: ${({ theme }) => theme.fontWeight.bold};
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: -60px;
+    z-index:10;
 
     li {
       margin-bottom: 1.5vw;
@@ -62,8 +65,8 @@ const StyledWrapper = styled.nav`
   @media (max-width: 640px) {
     
     font-size: ${(props) => props.theme.fontSize.small};
-    /* margin-top: 35vh; */
-    /* justify-content: flex-start; */
+    margin-top: 0;
+    z-index:0;
     ul {
       flex-direction: row;
       justify-content: center;

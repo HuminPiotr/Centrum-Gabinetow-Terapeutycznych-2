@@ -20,10 +20,8 @@ const StyledFooter = styled.footer`
     font-size: 9px;
     align-self: flex-end;
   }
+  
 
-  .phone {
-    text-transform: capitalize;
-  }
   .address {
     margin-right: 10%;
   }
@@ -57,7 +55,7 @@ const Footer = () => {
 
   const phones = data.allDatoCmsProfileOsobowe.nodes.map(person => (
     <p>
-      {person.zawD} {person.imienazwisko} {person.telefon}
+      {person.zawD} {person.imienazwisko}  {person.telefon}
     </p>
   ))
 

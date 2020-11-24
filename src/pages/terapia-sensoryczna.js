@@ -101,6 +101,7 @@ const StyledWrapper = styled.div`
         text-align: center;
         order: -1;
         width:100%;
+        margin-bottom: 25px;
       }
     }
   }
@@ -157,15 +158,6 @@ const TerapiaSensorycznaPage = ({ data }) => (
         </div>
       </div>
 
-      <div className="info">
-        <div>
-          <h2>Zadzwoń i umów się na wizytę!</h2>
-          <HeaderIcon
-            icon={"/icon-phone2.jpg"}
-            title={data.person.nodes[0].telefon}
-          />
-        </div>
-      </div>
       <div className="content">
         <div className="content__text">
           <h2>
@@ -204,7 +196,16 @@ const TerapiaSensorycznaPage = ({ data }) => (
 
 
       </div>
-
+      
+      <div className="info">
+        <div>
+          <h2>Zadzwoń i umów się na wizytę!</h2>
+          <HeaderIcon
+            icon={"/icon-phone2.jpg"}
+            title={data.person.nodes[0].telefon}
+          />
+        </div>
+      </div>
     </StyledWrapper>
   </>
 )
