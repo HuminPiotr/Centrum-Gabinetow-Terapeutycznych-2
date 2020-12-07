@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import HeaderIcon from "../components/HeaderIcon"
 import ReactHtmlParser from "react-html-parser"
+import SEO from "../components/seo"
 
 const ArticleWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -61,6 +62,7 @@ const StyledImage = styled(Image)`
 const PostLayout = ({ data }) => {
   return (
     <ArticleWrapper>
+      <SEO title={data.datoCmsArtykul.tytul} />
       <StyledImage
         fluid={data.datoCmsArtykul.miniaturka.fluid}
         alt="miniaturka"

@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import PreviewArticle from "../components/PreviewArticle"
 import PagnitationNavigation from "../components/PagnitationNavigation"
+import SEO from "../components/seo"
 
 const BlogWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -41,6 +42,7 @@ const BlogLayout = ({ data, pageContext }) => {
 
   return (
     <BlogWrapper>
+      <SEO title="Blog" />
       <h1>Blog</h1>
       {blogPostList}
       <PagnitationNavigation currentPage={currentPage} numPages={numPages} />
