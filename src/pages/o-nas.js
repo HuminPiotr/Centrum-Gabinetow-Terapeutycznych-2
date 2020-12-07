@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 import PersonBall from "../components/PersonBall"
 
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const StyledWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -77,7 +77,7 @@ const ONasPage = ({ data }) => {
   return (
     <>
       <StyledWrapper>
-        {/* <SEO title="Home" /> */}
+        <SEO title="O nas" />
         <h1>O nas</h1>
         <div className="description">
           <div className="description__text">

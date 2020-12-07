@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Map from "../components/Map"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const StyledWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -56,6 +56,7 @@ const KontaktPage = ({ data }) => {
   ))
   return (
     <>
+    <SEO title="Kontakt" />
       <StyledWrapper>
         <h1>Kontakt</h1>
 

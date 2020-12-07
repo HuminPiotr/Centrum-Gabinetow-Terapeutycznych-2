@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 import PersonBall from "../components/PersonBall"
 import HeaderIcon from "../components/HeaderIcon"
 
@@ -104,6 +104,7 @@ const StyledWrapper = styled.div`
 const FizjoterapiaPage = ({ data }) => {
   return (
     <>
+    <SEO title="Pedagog" />
       <StyledWrapper>
         <h1>Gabinet terapii pedagogicznej</h1>
         <div className="content">

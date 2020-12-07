@@ -7,7 +7,7 @@ import PersonBall from "../components/PersonBall"
 import HeaderIcon from "../components/HeaderIcon"
 import ButtonLink from "../components/ButtonLink"
 
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const StyledWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -154,6 +154,7 @@ const StyledWrapper = styled.div`
 
 const LogopedaPage = ({ data }) => (
   <>
+  <SEO title="Logopeda" />
     <StyledWrapper>
       <h1>Gabinet logopedyczny</h1>
 

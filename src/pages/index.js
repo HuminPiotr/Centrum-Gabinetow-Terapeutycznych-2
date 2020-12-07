@@ -16,6 +16,7 @@ const StyledWrapper = styled.div`
 
 const IndexPage = () => (
   <>
+  <SEO title="Centrum gabinetów terapeutycznych" />
     <StyledWrapper className="hero">
       <TopNav />
       <MainCarousel />

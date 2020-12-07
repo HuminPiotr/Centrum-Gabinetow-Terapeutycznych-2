@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import PersonBall from "../components/PersonBall"
 import HeaderIcon from "../components/HeaderIcon"
+import SEO from "../components/seo"
 
 const StyledWrapper = styled.div`
   margin: 25px 130px 80px;
@@ -109,6 +110,7 @@ const StyledWrapper = styled.div`
 
 const TerapiaSensorycznaPage = ({ data }) => (
   <>
+  <SEO title="Terapia sensoryczna" />
     <StyledWrapper>
       <h1>Gabinet integracji sensorycznej</h1>
 

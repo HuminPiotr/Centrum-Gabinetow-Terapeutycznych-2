@@ -75,7 +75,9 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `pl`,
   meta: [],
-  description: ``,
+  description: `Terapeuta, psycholog, fizjoterapeuta, pedagog i logopeda, których łączy
+  miłość do dzieci i pragnienie, aby pomagać im w jak najbardziej
+  efektywny sposób.`,
 }
 
 SEO.propTypes = {
