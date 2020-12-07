@@ -8,12 +8,14 @@ module.exports = {
     efektywny sposób.`,
     image: `/icon-house2.jpg`,
     author: `Piotr Humin`,
+    siteUrl: `https://www.centrum-gabinetow-terapeutycznych.pl`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

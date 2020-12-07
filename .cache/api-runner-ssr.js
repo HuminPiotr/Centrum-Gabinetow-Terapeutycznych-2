@@ -8,6 +8,9 @@ var plugins = [{
       plugin: require('D:/PROJECT/Centrum gabinetów terapeutycznych/gatsby/centrum-gabinetów-terapeutycznych/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('D:/PROJECT/Centrum gabinetów terapeutycznych/gatsby/centrum-gabinetów-terapeutycznych/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('D:/PROJECT/Centrum gabinetów terapeutycznych/gatsby/centrum-gabinetów-terapeutycznych/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
       options: {"plugins":[]},
     },{
