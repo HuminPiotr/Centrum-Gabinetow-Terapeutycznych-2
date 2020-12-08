@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.centrum-gabinetow-terapeutycznych.pl/sitemap.xml
+Host: https://www.centrum-gabinetow-terapeutycznych.pl

@@ -16,6 +16,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
