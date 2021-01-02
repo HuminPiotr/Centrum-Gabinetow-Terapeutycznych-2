@@ -50,7 +50,7 @@ const Footer = () => {
     allFile: { nodes },
   } = data
 
-  const iconHouse = nodes[2].publicURL
+  const iconHouse = nodes[0].publicURL
   const iconPhone = nodes[1].publicURL
 
   const phones = data.allDatoCmsProfileOsobowe.nodes.map(person => (
@@ -82,7 +82,7 @@ const Footer = () => {
 
 const query = graphql`
   {
-    allFile(filter: { name: { regex: "/icon/" } }) {
+    allFile(filter: { name: { regex: "/iconFooter/" } }) {
       nodes {
         publicURL
       }
