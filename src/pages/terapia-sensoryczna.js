@@ -105,6 +105,11 @@ const StyledWrapper = styled.div`
         margin-bottom: 25px;
       }
     }
+    .info{
+      h2{
+        text-align: center;
+      }
+    }
   }
 `
 

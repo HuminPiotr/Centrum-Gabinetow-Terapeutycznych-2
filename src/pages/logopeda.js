@@ -148,6 +148,9 @@ const StyledWrapper = styled.div`
     }
     .info {
       flex-direction: column;
+      h2{
+        text-align: center;
+      }
     }
   }
 `

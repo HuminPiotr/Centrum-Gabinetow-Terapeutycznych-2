@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 50px;
   }
   .content {
-    display: flex;
+    /* display: flex; */
 
     &__logo {
       position: absolute;
@@ -108,7 +108,28 @@ const FizjoterapiaPage = ({ data }) => {
       <StyledWrapper>
         <h1>Gabinet terapii pedagogicznej</h1>
         <div className="content">
-
+            <h2>Terapia pedagogiczna skierowana jest do:</h2>
+            <ul>
+              <li>dzieci o nieharmonijnym rozwoju</li>
+              <li>dzieci przedszkolnych z grup ryzyka dysleksji, czyli dzieci, które nie osiągnęły gotowości do czytania i pisania</li>
+              <li>dzieci z zaburzeniami koncentracji uwagi</li>
+              <li>dzieci z niepełnosprawnością intelektualną</li>
+              <li>dzieci ze specyficznymi trudności w opanowaniu umiejętności:
+                <br/>
+                -czytanie - <strong>dysleksja</strong> <br />
+                -dobrego poziomu graficznego pisma - <strong>dysgrafia</strong> 
+                <br/>
+                -poprawnego pisania - <strong>dysortografia</strong> 
+              </li>
+              <li>dzieci o obniżonej sprawności manualnej</li>
+              <li>dzieci z zaburzeniami orientacji w schemacie ciała i w przestrzeni</li>
+              <li>dzieci z zaburzoną koordynacją wzrokowo-słuchowo-ruchową</li>
+              <li>dzieci z nadpobudliwością psychoruchową (ADHD)</li>
+            </ul>
+            
+            <p>
+            Celem  prowadzonych zajęć jest podnoszenie umiejętności szkolnych, zapobieganie deficytom, osiąganie sukcesów, podnoszenie motywacji do zdobywania wiedzy w sposób szybki i trwały. Ćwiczenia i zadania są formą treningu, który wydobywa potencjał intelektualny dziecka i rozwija go wszechstronnie.
+            </p>
 
           <div className="content__logo">
             {/* <Image fixed={data.logo.nodes[0].fixed} /> */}
