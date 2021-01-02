@@ -43,6 +43,9 @@ const StyledWrapper = styled.div`
       margin: 15px 25px;
       min-width: 34%;
     }
+    .subtitle{
+      font-size: 1.2rem;
+    }
   }
   @media (max-width: 640px) {
     margin: 25px;
