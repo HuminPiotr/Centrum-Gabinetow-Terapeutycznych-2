@@ -5,7 +5,7 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---cache-caches-gatsby-plugin-offline-app-shell-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\.cache\\caches\\gatsby-plugin-offline\\app-shell.js"))),
+  "component---cache-dev-404-page-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\.cache\\dev-404-page.js"))),
   "component---src-layouts-blog-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\layouts\\blog.js"))),
   "component---src-layouts-post-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\layouts\\post.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("D:\\PROJECT\\Centrum gabinetów terapeutycznych\\gatsby\\centrum-gabinetów-terapeutycznych\\src\\pages\\404.js"))),

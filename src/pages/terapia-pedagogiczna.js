@@ -53,6 +53,7 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin-top: 50px;
     margin-bottom: 50px;
     h2 {
       margin-bottom: 25px;
@@ -96,6 +97,7 @@ const StyledWrapper = styled.div`
       }
     }
     .info {
+      
       flex-direction: column;
     }
   }
