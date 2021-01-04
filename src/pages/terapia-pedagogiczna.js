@@ -107,6 +107,31 @@ const FizjoterapiaPage = ({ data }) => {
     <SEO title="Pedagog" />
       <StyledWrapper>
         <h1>Gabinet terapii pedagogicznej</h1>
+
+        <div className="person" id="person">
+          <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
+          <div className="person__text">
+            <h2> {data.person.nodes[0].imienazwisko} </h2>
+            <p>
+              Nauczyciel z wieloletnim stażem, terapeuta pedagogiczny, posiada
+              kwalifikacje do prowadzenia zajęć metodą choreoterapii. Prowadzi
+              zajęcia korekcyjno – kompensacyjne, pracuje z dziećmi dotkniętymi
+              dysleksją, dysgrafią i dysortografią.
+            </p>
+            <p>
+              Od 15 lat pracuję w Szkole Podstawowej, wiem, jak ważna jest pomoc
+              dziecku w przezwyciężaniu trudności, umożliwienie mu prawidłowego
+              funkcjonowania w zespole i osiąganie sukcesów. Prowadząc zajęcia
+              terapeutyczne, stosuję różnorodne metody i formy pracy,
+              wykorzystuję pokrewne elementy technik stymulujących rozwój
+              umiejętności szkolnych dziecka tj. elementy bajkoterapii,
+              muzykoterapii i arteterapii, udzielam wsparcia w edukacji
+              szkolnej, wspomagam proces uczenia się poprzez ćwiczenia
+              relaksacyjne i wyciszające.
+            </p>
+          </div>
+        </div>
+        
         <div className="content">
             <h2>Terapia pedagogiczna skierowana jest do:</h2>
             <ul>
@@ -136,29 +161,7 @@ const FizjoterapiaPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="person" id="person">
-          <PersonBall photo={data.person.nodes[0].fotografia} key="1" second />
-          <div className="person__text">
-            <h2> {data.person.nodes[0].imienazwisko} </h2>
-            <p>
-              Nauczyciel z wieloletnim stażem, terapeuta pedagogiczny, posiada
-              kwalifikacje do prowadzenia zajęć metodą choreoterapii. Prowadzi
-              zajęcia korekcyjno – kompensacyjne, pracuje z dziećmi dotkniętymi
-              dysleksją, dysgrafią i dysortografią.
-            </p>
-            <p>
-              Od 15 lat pracuję w Szkole Podstawowej, wiem, jak ważna jest pomoc
-              dziecku w przezwyciężaniu trudności, umożliwienie mu prawidłowego
-              funkcjonowania w zespole i osiąganie sukcesów. Prowadząc zajęcia
-              terapeutyczne, stosuję różnorodne metody i formy pracy,
-              wykorzystuję pokrewne elementy technik stymulujących rozwój
-              umiejętności szkolnych dziecka tj. elementy bajkoterapii,
-              muzykoterapii i arteterapii, udzielam wsparcia w edukacji
-              szkolnej, wspomagam proces uczenia się poprzez ćwiczenia
-              relaksacyjne i wyciszające.
-            </p>
-          </div>
-        </div>
+
 
         <div className="info">
           <div>
