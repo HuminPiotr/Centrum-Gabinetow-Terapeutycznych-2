@@ -142,20 +142,20 @@ const TerapiaSensorycznaPage = ({ data }) => (
           <p>
             Do pracy z dzieckiem podchodzę z pasją i zaangażowaniem. Ważne jest
             dla mnie indywidualne podejście do każdego dziecka, dostosowanie
-            swojego działania do jego potrzeb, wyrównywanie i kompensacja
+            swojego działania do jego potrzeb, wyrównywanie <br /> i kompensacja
             braków, ale także aktywizacja i wzmacnianie niezaburzonych funkcji,
-            odkrywanie i rozwijanie zdolności.{" "}
+            odkrywanie i rozwijanie zdolności.
           </p>
           <p>
-            Duże znaczenie przywiązuję również do współpracy z rodzicami,
+            Duże znaczenie przywiązuję również do współpracy <br /> z rodzicami,
             ponieważ trudności, jakie przejawia dziecko bardzo często wpływają
             na obszary codziennego życia i mogą odbijać się na funkcjonowaniu
             całej rodziny. Rodzice będąc głównymi opiekunami dziecka kierują
-            jego rozwojem i wychowaniem i niemalże w każdej minucie życia
+            jego rozwojem i wychowaniem <br />i niemalże w każdej minucie życia
             swojego dziecka mają możliwość wspomagania, kontroli i obserwacji.
             Dlatego wspólna praca rodziców i terapeuty z dzieckiem, stały
-            kontakt rodziców z terapeutą i wzajemne przekazywanie oraz omawianie
-            zmian w funkcjonowaniu dziecka, stwarzają najlepsze warunki dla
+            kontakt rodziców  <br />z terapeutą i wzajemne przekazywanie oraz omawianie
+            zmian <br /> w funkcjonowaniu dziecka, stwarzają najlepsze warunki dla
             rozwoju psychoruchowego dziecka, co wpływa nie tylko na rozwój
             samego dziecka, ale także na funkcjonowanie całej rodziny.
           </p>

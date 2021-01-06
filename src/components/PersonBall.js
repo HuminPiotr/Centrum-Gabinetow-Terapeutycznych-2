@@ -61,7 +61,7 @@ const PersonBall = ({ photo, title, subtitle, second, link=false }) => {
     case 'PSYCHOLOG':
       linkName='/psycholog'
       break;
-    case 'PEDAGOG':
+    case 'TERAPEUTA PEDAGOGICZNY':
         linkName='/terapia-pedagogiczna'
         break;
     case 'LOGOPEDA':

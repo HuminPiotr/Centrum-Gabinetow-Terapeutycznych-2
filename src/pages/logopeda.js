@@ -170,15 +170,16 @@ const LogopedaPage = ({ data }) => (
             jest moją pracą – jestem logopedą, pedagogiem oraz terapeutą ręki.
             Dodatkowo społecznie jestem prezesem dwóch stowarzyszeń:
             stowarzyszenie „Przyjazna Szkoła Bez Barier” oraz stowarzyszenie
-            „Rodzinne Ogrody Działkowe „Malwa” w Białej Podlaskiej. Ukończyłam
-            studia na kierunkach pedagogika kształcenie zintegrowane i
-            wychowanie przedszkolne, informatyka nauczycielska oraz logopedia.
-            Po studiach zdobywałam doświadczenie jako pedagog, logopeda i
-            informatyk w placówkach oświatowych. Zdobyte kwalifikacje oraz
+            „Rodzinne Ogrody Działkowe „Malwa” <br /> w  Białej Podlaskiej. <br /> 
+            Ukończyłam
+            studia na kierunkach pedagogika kształcenie zintegrowane <br /> i
+            wychowanie przedszkolne, informatyka nauczycielska oraz logopedia. <br />
+            Po studiach zdobywałam doświadczenie jako pedagog, logopeda <br /> i
+            informatyk w placówkach oświatowych. <br /> Zdobyte kwalifikacje oraz
             umiejętności pozwoliły mi na tworzeniu własnych pomocy
-            terapeutycznych a także umieszczanie filmików na kanale youtube z
+            terapeutycznych a także umieszczanie filmików na kanale youtube <br /> z
             pomysłami dla dzieci na ćwiczenia logopedyczne. Nawiązałam
-            współpracę z osobami, które tak jak ja z pasją i zaangażowaniem
+            współpracę <br /> z osobami, które tak jak ja z pasją i zaangażowaniem
             realizują swoje marzenia wierząc, że ich ciężka praca ma sens. W
             lutym 2020 roku otworzyłam własny gabinet terapeutyczny.
           </p>
@@ -192,12 +193,12 @@ const LogopedaPage = ({ data }) => (
         <div className="content__text">
           <p>
             Gabinet logopedyczny jest miejscem, w którym mogę realizować swoje
-            pasje. Praca logopedy jest dla mnie źródłem satysfakcji, dając mi
-            możliwość współpracy z drugim człowiekiem. W swojej pracy kieruję
+            pasje.<br /> Praca logopedy jest dla mnie źródłem satysfakcji, dając mi
+            możliwość współpracy <br />z drugim człowiekiem. W swojej pracy kieruję
             się koniecznością dostosowywania programu terapii do indywidualnych
             możliwości i potrzeb dziecka, a głównym założeniem jest zarówno
             stymulowanie mowy, jak i oddziaływanie na wszystkie sfery rozwojowe.
-            Uważam, że tylko holistyczne podejście gwarantuje sukces w terapii.
+            Uważam, że tylko holistyczne podejście gwarantuje sukces w terapii. <br />
             W moim gabinecie panuje przyjemna atmosfera, która zachęca do
             rozwijania komunikacji oraz sprzyja rozwojowi mowy. Tworzę własne
             pomoce logopedyczne, które są bardzo lubiane przez dzieci, dodatkowo

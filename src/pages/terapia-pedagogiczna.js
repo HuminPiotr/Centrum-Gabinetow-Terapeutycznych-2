@@ -115,48 +115,49 @@ const FizjoterapiaPage = ({ data }) => {
           <div className="person__text">
             <h2> {data.person.nodes[0].imienazwisko} </h2>
             <p>
-              Nauczyciel z wieloletnim stażem, terapeuta pedagogiczny, posiada
-              kwalifikacje do prowadzenia zajęć metodą choreoterapii. Prowadzi
-              zajęcia korekcyjno – kompensacyjne, pracuje z dziećmi dotkniętymi
-              dysleksją, dysgrafią i dysortografią.
+            Nauczyciel z wieloletnim stażem, terapeuta pedagogiczny, posiada
+          kwalifikacje do prowadzenia zajęć metodą choreoterapii. Prowadzi zajęcia korekcyjno –
+          kompensacyjne, pracuje z dziećmi dotkniętymi dysleksją, dysgrafią <br /> i dysortografią.
             </p>
             <p>
-              Od 15 lat pracuję w Szkole Podstawowej, wiem, jak ważna jest pomoc
-              dziecku w przezwyciężaniu trudności, umożliwienie mu prawidłowego
-              funkcjonowania w zespole i osiąganie sukcesów. Prowadząc zajęcia
-              terapeutyczne, stosuję różnorodne metody i formy pracy,
-              wykorzystuję pokrewne elementy technik stymulujących rozwój
-              umiejętności szkolnych dziecka tj. elementy bajkoterapii,
-              muzykoterapii i arteterapii, udzielam wsparcia w edukacji
-              szkolnej, wspomagam proces uczenia się poprzez ćwiczenia
-              relaksacyjne i wyciszające.
+            Od 15 lat pracuję w Szkole Podstawowej, wiem, jak ważna jest pomoc dziecku w przezwyciężaniu
+            trudności, umożliwienie mu prawidłowego funkcjonowania w zespole i osiąganie sukcesów.
+            Prowadząc zajęcia terapeutyczne, stosuję różnorodne metody i formy pracy, wykorzystuję pokrewne
+            elementy technik stymulujących rozwój umiejętności szkolnych dziecka tj. elementy bajkoterapii,
+            muzykoterapii i choreoterapii, udzielam wsparcia w edukacji szkolnej, wspomagam proces uczenia się
+            poprzez ćwiczenia relaksacyjne i wyciszające.
             </p>
           </div>
         </div>
         
         <div className="content">
-            <h2>Terapia pedagogiczna skierowana jest do:</h2>
-            <ul>
-              <li>dzieci o nieharmonijnym rozwoju</li>
-              <li>dzieci przedszkolnych z grup ryzyka dysleksji, czyli dzieci, które nie osiągnęły gotowości do czytania i pisania</li>
-              <li>dzieci z zaburzeniami koncentracji uwagi</li>
-              <li>dzieci z niepełnosprawnością intelektualną</li>
-              <li>dzieci ze specyficznymi trudności w opanowaniu umiejętności:
-                <br/>
-                -czytanie - <strong>dysleksja</strong> <br />
-                -dobrego poziomu graficznego pisma - <strong>dysgrafia</strong> 
-                <br/>
-                -poprawnego pisania - <strong>dysortografia</strong> 
-              </li>
-              <li>dzieci o obniżonej sprawności manualnej</li>
-              <li>dzieci z zaburzeniami orientacji w schemacie ciała i w przestrzeni</li>
-              <li>dzieci z zaburzoną koordynacją wzrokowo-słuchowo-ruchową</li>
-              <li>dzieci z nadpobudliwością psychoruchową (ADHD)</li>
-            </ul>
-            
+            <p>Bardzo cenię sobie trzy formy aktywności – muzykę, taniec i ruch. Uważam, że terapia przez
+            sztukę wspomaga rozwój, koryguje zaburzenia, rozbudza wyobraźnię, aktywizuje i mobilizuje, dając
+            poczucie własnej wartości <br />i satysfakcji.</p>
+
             <p>
-            Celem  prowadzonych zajęć jest podnoszenie umiejętności szkolnych, zapobieganie deficytom, osiąganie sukcesów, podnoszenie motywacji do zdobywania wiedzy w sposób szybki i trwały. Ćwiczenia i zadania są formą treningu, który wydobywa potencjał intelektualny dziecka i rozwija go wszechstronnie.
+            Aktywność twórcza pozwala dziecku uwierzyć w siebie, zaakceptować i pokonać ograniczenia czy
+            trudności, daje możliwość wielozmysłowego poznania docierających do niego informacji o
+            otaczającym świecie.
             </p>
+
+            <p>
+            <strong>Terapia pedagogiczna </strong> to idealna forma wsparcia dla dzieci ze specyficznymi trudnościami
+            w uczeniu się (<strong>dysleksja</strong>, <strong>dysgrafia </strong>, <strong> dysortografia</strong>), z zaburzeniami koncentracji uwagi, z zaburzeniami
+            emocjonalnymi, <br /> z zaburzoną koordynacją wzrokowo-słuchowo-ruchową. To doskonałe rozwiązanie
+            dla dzieci nieśmiałych, nadwrażliwych, niesamodzielnych, mniej sprawnych ruchowo, manualnie czy
+            grafomotorycznie.
+            </p>
+
+            <p>
+            Zajęcia – przeprowadzane są w przyjaznej atmosferze, często w formie zabawy, dzięki czemu
+            dzieci uczęszczają na nie bardzo chętnie. Ćwiczenia i zadania są formą treningu, który wydobywa
+            potencjał intelektualny dziecka <br />i rozwija go wszechstronnie.
+            </p>
+
+            <p>Serdecznie zapraszam.</p>
+
+
 
           <div className="content__logo">
             {/* <Image fixed={data.logo.nodes[0].fixed} /> */}

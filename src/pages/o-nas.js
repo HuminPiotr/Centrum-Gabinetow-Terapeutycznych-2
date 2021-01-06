@@ -87,11 +87,11 @@ const ONasPage = ({ data }) => {
             <h2>Kim jesteśmy?</h2>
             <p>
               Terapeuta, fizjoterapeuta, pedagog i logopeda, których
-              łączy miłość do ludzi i pragnienie, aby pomagać im w jak
+              łączy miłość do ludzi <br />i pragnienie, aby pomagać im w jak
               najbardziej efektywny sposób. My nie rozmawiamy o problemach, my
               staramy się z nimi zmierzyć!
               <br />
-              Pacjenci są naszym największym dobrem, a zaspokojenie ich potrzeb
+              Pacjenci są naszym największym dobrem, a zaspokojenie ich potrzeb <br />
               i oczekiwań - naszym najwyższym celem. To nie tylko motto, ale
               przede wszystkim dewiza, którą kierujemy się na co dzień. Nasze
               centrum łączy osoby, które z pasją i zaangażowaniem realizują
