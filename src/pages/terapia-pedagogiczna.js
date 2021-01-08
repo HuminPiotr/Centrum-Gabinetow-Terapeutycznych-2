@@ -143,7 +143,7 @@ const FizjoterapiaPage = ({ data }) => {
 
             <p>
             <strong>Terapia pedagogiczna </strong> to idealna forma wsparcia dla dzieci ze specyficznymi trudnościami
-            w uczeniu się (<strong>dysleksja</strong>, <strong>dysgrafia </strong>, <strong> dysortografia</strong>), z zaburzeniami koncentracji uwagi, z zaburzeniami
+            w uczeniu się (<strong>dysleksja</strong>, <strong>dysgrafia</strong>,<strong> dysortografia</strong>), z zaburzeniami koncentracji uwagi, z zaburzeniami
             emocjonalnymi, <br /> z zaburzoną koordynacją wzrokowo-słuchowo-ruchową. To doskonałe rozwiązanie
             dla dzieci nieśmiałych, nadwrażliwych, niesamodzielnych, mniej sprawnych ruchowo, manualnie czy
             grafomotorycznie.
